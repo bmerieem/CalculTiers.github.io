@@ -118,7 +118,7 @@ input {
   height: 40px; /* Réduire la hauteur explicite */
   line-height: 1.4; /* Ajuster l'espacement vertical */
   box-sizing: border-box;
-  margin: 5px 0 15px;
+
 }
 
 input[type="time"] {
