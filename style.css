@@ -118,12 +118,11 @@ input {
   height: 40px; /* Réduire la hauteur explicite */
   line-height: 1.4; /* Ajuster l'espacement vertical */
   box-sizing: border-box;
-  margin-bottom: 20px;
 
 }
 
 input[type="time"] {
-  padding: 10px; /* Réduire le padding pour un affichage plus compact */
+  padding: 5px; /* Réduire le padding pour un affichage plus compact */
   height: 42px; /* Ajuster la hauteur */
   min-height: 42px; /* Empêcher que la hauteur soit trop petite */
   width: 100% !important;
@@ -152,7 +151,7 @@ input:focus {
 #calculateButton {
   width: 100%;
   padding: 10px;
-  margin-top: 10px;
+  margin-top: 25px;
   background: linear-gradient(200deg, #E9B2F9, #C675F8);
   color: #fff;
   border: none;
