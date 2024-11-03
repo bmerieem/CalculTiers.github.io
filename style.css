@@ -12,20 +12,21 @@ body {
   margin: 0;
   padding: 20px;
   overflow-y: auto; /* Active le défilement vertical */
-  max-height: 100vh; /* Limite la hauteur à 90% de la hauteur de l'écran */
+  max-height: 100%; /* Limite la hauteur à 100% de la hauteur de l'écran */
+
 }
 
 
 
 /* Conteneur principal avec effet de carte */
 .container {
-  background: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   padding: 2rem;
   border-radius: 15px;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.4);
   width: 100%;
-  max-width: 400px;
+  max-width: 1000px;
   text-align: center;
   color: #ffffff;
 
@@ -106,7 +107,6 @@ input:focus {
   transform: scale(1.05);
 }
 
-
 input[type="time"] {
   display: block;
   width: 100% !important;
@@ -182,12 +182,14 @@ input[type="time"] {
 .result {
   display: none; /* Masque le conteneur tant qu'il n'est pas actif */
   color: #e0e0e0;
-  font-size: 1.2rem;
+  font-size: 14px;
   font-family: jua, sans-serif;
+  color: white;
   padding: 1.5rem;
   text-align: center;
   border-radius: 15px;
   margin-top: 30px;
+
 }
 
 /* Effet néon appliqué uniquement lorsque la classe 'active' est présente */
@@ -226,6 +228,7 @@ input[type="time"] {
   position: relative;
   cursor: pointer;
   font-weight: bold;
+  font-size: 14px;
 }
 .accordion-item-header::after {
   content: "\002B";
