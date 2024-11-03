@@ -8,7 +8,7 @@
   <script src="https://kit.fontawesome.com/bf2a444380.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  
+
   <section class="wrapper">
         <div id="stars"></div>
         <div id="stars2"></div>
@@ -25,11 +25,11 @@
 
     <h1 id="title" >Calculateur des Tiers de Nuit</h1>
     
-    <label id="labelSunset" for="sunset" >Heure du maghrib ( Coucher de Soleil ) :</label>
-    <input type="time" id="sunset" required placeholder="12:30" style="width:100%">
+    <label id="labelSunset" for="sunset" >Heure du maghrib ( Coucher de Soleil ) </label>
+    <input type="time" id="sunset" required value="12:30" step="900">
     
-    <label id="labelFajr" for="fajr" >Heure du Fajr :</label>
-    <input type="time" id="fajr" required>
+    <label id="labelFajr" for="fajr" >Heure du Fajr </label>
+    <input type="time" id="fajr" required value="12:30" step="900">
     
     <div class="button-container">
           <button onclick="calculateTiers()" id="calculateButton">Calculer les Tiers</button>
