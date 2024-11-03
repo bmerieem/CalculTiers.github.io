@@ -53,7 +53,7 @@ function loadStoredData() {
   if (storedFajr) document.getElementById('fajr').value = storedFajr;
 }
 
-function requestNotification(firstThird, lastThird) {
+/*function requestNotification(firstThird, lastThird) {
   if (Notification.permission === "granted") {
     new Notification("Premier Tiers", { body: `finit à ${firstThird.toTimeString().slice(0, 5)}` });
     new Notification("Dernier Tiers", { body: `Débute à ${lastThird.toTimeString().slice(0, 5)}` });
@@ -82,7 +82,7 @@ function checkNotificationPermission() {
       }
     });
   }
-}
+}*/
 
 
 const accordionItemHeaders = document.querySelectorAll(".accordion-item-header");
