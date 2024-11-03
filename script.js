@@ -85,31 +85,30 @@ function checkNotificationPermission() {
 }
 
 
-const accordionItemHeaders = document.querySelectorAll(".accordion-item-header");
+document.addEventListener('DOMContentLoaded', function () {
+  const accordions = document.querySelectorAll('.accordion-item-header');
 
-accordionItemHeaders.forEach(accordionItemHeader => {
-  accordionItemHeader.addEventListener("click", event => {
-    
-    // Uncomment in case you only want to allow for the display of only one collapsed item at a time!
-    
-    // const currentlyActiveAccordionItemHeader = document.querySelector(".accordion-item-header.active");
-    // if(currentlyActiveAccordionItemHeader && currentlyActiveAccordionItemHeader!==accordionItemHeader) {
-    //   currentlyActiveAccordionItemHeader.classList.toggle("active");
-    //   currentlyActiveAccordionItemHeader.nextElementSibling.style.maxHeight = 0;
-    // }
+  accordions.forEach(header => {
+    header.addEventListener('click', function () {
+      // Ferme tous les autres éléments
+      accordions.forEach(item => {
+        if (item !== this && item.classList.contains('active')) {
+          item.classList.remove('active');
+          item.nextElementSibling.style.maxHeight = null;
+        }
+      });
 
-    accordionItemHeader.classList.toggle("active");
-    const accordionItemBody = accordionItemHeader.nextElementSibling;
-    if(accordionItemHeader.classList.contains("active")) {
-      accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + "px";
-    }
-    else {
-      accordionItemBody.style.maxHeight = 0;
-    }
-    
+      // Active/désactive l'élément cliqué
+      this.classList.toggle('active');
+      const body = this.nextElementSibling;
+      if (this.classList.contains('active')) {
+        body.style.maxHeight = body.scrollHeight + 'px';
+      } else {
+        body.style.maxHeight = null;
+      }
+    });
   });
 });
-
 
 
 document.addEventListener("DOMContentLoaded", function() {
