@@ -101,6 +101,11 @@ input:focus {
   transform: scale(1.05);
 }
 
+input[type="time"] {
+    width: 100% !important;
+}
+
+
 /* Boutons futuristes */
 #calculateButton {
   width: 100%;
