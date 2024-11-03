@@ -104,6 +104,7 @@ input {
 
 
 
+
 input {
   width: 100%;
   padding: 15px 10px; /* Uniformiser le padding */
@@ -115,9 +116,12 @@ input {
   text-align: center;
   transition: border-color 0.3s ease, transform 0.3s ease;
   min-width: 95% !important;
-  height: 48px; /* Définir une hauteur explicite */
+  height: 30px; /* Définir une hauteur explicite */
   line-height: 1.5; /* Assurer un espacement vertical correct */
   box-sizing: border-box;
+
+  margin: 5px 0 15px;
+
 }
 
 input[type="time"] {
