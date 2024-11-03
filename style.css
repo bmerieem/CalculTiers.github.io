@@ -106,7 +106,7 @@ input {
 
 input {
   width: 100%;
-  padding: 15px 10px; /* Uniformiser le padding */
+  padding: 10px 8px; /* Réduire le padding pour diminuer la hauteur */
   border: 2px solid rgba(255, 255, 255, 0.3);
   border-radius: 20px;
   background: rgba(255, 255, 255, 0.2);
@@ -115,26 +115,20 @@ input {
   text-align: center;
   transition: border-color 0.3s ease, transform 0.3s ease;
   min-width: 95% !important;
-  height: 30px; /* Définir une hauteur explicite */
-  line-height: 1; /* Assurer un espacement vertical correct */
+  height: 40px; /* Réduire la hauteur explicite */
+  line-height: 1.4; /* Ajuster l'espacement vertical */
   box-sizing: border-box;
-
   margin: 5px 0 15px;
-
 }
 
 input[type="time"] {
-  padding: 15px; /* Assurer un padding suffisant */
-  height: 30px; /* Augmenter la hauteur pour un meilleur affichage */
-  min-height: 30px; /* Empêche l'input de devenir trop petit */
-  width: 95% !important;
+  padding: 10px; /* Réduire le padding pour un affichage plus compact */
+  height: 42px; /* Ajuster la hauteur */
+  min-height: 42px; /* Empêcher que la hauteur soit trop petite */
+  width: 100% !important;
   align-content: center;
   box-sizing: border-box;
-  min-width: 95% !important;
-
 }
-
-
 
 
 /*input[type="time"] {
