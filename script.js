@@ -109,3 +109,25 @@ accordionItemHeaders.forEach(accordionItemHeader => {
     
   });
 });
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  const timeInputs = document.querySelectorAll('input[type="time"]');
+
+  timeInputs.forEach(input => {
+    if (!input.value) {
+      input.setAttribute('placeholder', 'HH:MM'); // Affiche un format type placeholder
+    }
+
+    input.addEventListener('focus', function() {
+      this.removeAttribute('placeholder');
+    });
+
+    input.addEventListener('blur', function() {
+      if (!this.value) {
+        this.setAttribute('placeholder', 'HH:MM');
+      }
+    });
+  });
+});
