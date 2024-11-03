@@ -21,7 +21,7 @@ function calculateTiers() {
   // Sélectionne le conteneur et y ajoute la classe 'active'
   const resultContainer = document.getElementById('result');
   resultContainer.innerHTML = `
-    <p>Premier tiers : ${firstThird.toTimeString().slice(0, 5)}</p>
+    <p>Fin du premier tiers : ${firstThird.toTimeString().slice(0, 5)}</p>
     <p>Début du Dernier tiers : ${lastThird.toTimeString().slice(0, 5)}</p>
   `;
   resultContainer.classList.add('active'); // Affiche le néon après le calcul
@@ -55,7 +55,7 @@ function loadStoredData() {
 
 function requestNotification(firstThird, lastThird) {
   if (Notification.permission === "granted") {
-    new Notification("Premier Tiers", { body: `Débute à ${firstThird.toTimeString().slice(0, 5)}` });
+    new Notification("Premier Tiers", { body: `finit à ${firstThird.toTimeString().slice(0, 5)}` });
     new Notification("Dernier Tiers", { body: `Débute à ${lastThird.toTimeString().slice(0, 5)}` });
   } else if (Notification.permission !== "denied") {
     Notification.requestPermission().then(permission => {
@@ -94,7 +94,7 @@ accordionItemHeaders.forEach(accordionItemHeader => {
     
      const currentlyActiveAccordionItemHeader = document.querySelector(".accordion-item-header.active");
      if(currentlyActiveAccordionItemHeader && currentlyActiveAccordionItemHeader!==accordionItemHeader) {
-      currentlyActiveAccordionItemHeader.classList.toggle("active");
+       currentlyActiveAccordionItemHeader.classList.toggle("active");
        currentlyActiveAccordionItemHeader.nextElementSibling.style.maxHeight = 0;
      }
 
