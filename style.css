@@ -117,7 +117,7 @@ input {
   transition: border-color 0.3s ease, transform 0.3s ease;
   min-width: 95% !important;
   height: 30px; /* Définir une hauteur explicite */
-  line-height: 1.5; /* Assurer un espacement vertical correct */
+  line-height: 1; /* Assurer un espacement vertical correct */
   box-sizing: border-box;
 
   margin: 5px 0 15px;
@@ -128,7 +128,7 @@ input[type="time"] {
   padding: 15px; /* Assurer un padding suffisant */
   height: 50px; /* Augmenter la hauteur pour un meilleur affichage */
   min-height: 50px; /* Empêche l'input de devenir trop petit */
-  width: 100% !important;
+  width: 95% !important;
   align-content: center;
   box-sizing: border-box;
   min-width: 95% !important;
