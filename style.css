@@ -15,9 +15,6 @@ body {
 
 
 
-
-
-
 /* Conteneur principal avec effet de carte */
 .container {
   background: rgba(255, 255, 255, 0.1);
@@ -31,11 +28,10 @@ body {
   color: #ffffff;
 
 
+
   overflow-y: auto; /* Active le défilement vertical */
-  max-height: 90vh; /* Limite la hauteur à 90% de la hauteur de l'écran */
+  max-height: 100vh; /* Limite la hauteur à 90% de la hauteur de l'écran */
 }
-
-
 
 
 
@@ -84,7 +80,7 @@ label {
 }
 
 /* Input time avec design arrondi et effet de focus */
-input[type="time"] {
+input {
   width: 100%;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -99,7 +95,7 @@ input[type="time"] {
   transition: border-color 0.3s ease, transform 0.3s ease;
 }
 
-input[type="time"]:focus {
+input:focus {
   border-color: #E9B2F9; /* Bordure rose lors du focus */
   outline: none;
   transform: scale(1.05);
