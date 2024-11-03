@@ -125,7 +125,7 @@ input[type="time"] {
   width: 100%;
   padding: 10px;
   margin-top: 10px;
-  background: linear-gradient(135deg, #C675F8, #E9B2F9);
+  background: linear-gradient(200deg, #E9B2F9, #C675F8);
   color: #fff;
   border: none;
   border-radius: 20px;
@@ -222,7 +222,6 @@ input[type="time"] {
   max-width: 1000px;
   margin: 2rem auto;
   margin-bottom: 0;
-
 }
 .accordion-item {
   background-color: #fff;
@@ -302,7 +301,9 @@ input[type="time"] {
 
 
 
-
+li {
+  text-align: left !important;
+}
 
 /* le fond avec étoiles */
 html {
