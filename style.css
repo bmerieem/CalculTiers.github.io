@@ -1,28 +1,6 @@
 /* Import de la police */
 @import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
 
-
-@media (max-width: 768px) {
-  input[type="date"], input[type="time"] {
-    width: 100%; /* Prend toute la largeur */
-    box-sizing: border-box;
-    padding: 10px; /* Assure une bonne lisibilité */
-  }
-  
-  .container {
-    width: 95%; /* Ajuste la largeur du conteneur pour les petits écrans */
-    margin: auto; /* Centre le conteneur */
-  }
-}
-
-
-@media (max-width: 1024px) {
-  .container {
-    padding: 15px;
-    max-width: 600px;
-  }
-}
-
 /* Dégradé de fond avec couleurs apaisantes */
 body {
   display: flex;
@@ -33,12 +11,12 @@ body {
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 20px;
-  overflow-y: auto;
-    max-height: 100vh; /* Limite la hauteur à 90% de la hauteur de l'écran */
-      overflow-x: hidden; /* Empêche le débordement horizontal */
-
-
 }
+
+
+
+
+
 
 /* Conteneur principal avec effet de carte */
 .container {
@@ -51,16 +29,15 @@ body {
   max-width: 400px;
   text-align: center;
   color: #ffffff;
+
+
   overflow-y: auto; /* Active le défilement vertical */
-  max-height: 100vh; /* Limite la hauteur à 90% de la hauteur de l'écran */
-
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
+  max-height: 90vh; /* Limite la hauteur à 90% de la hauteur de l'écran */
 }
+
+
+
+
 
 /* Personnalisation de la scrollbar */
 .container::-webkit-scrollbar {
@@ -68,69 +45,25 @@ body {
 }
 
 .container::-webkit-scrollbar-track {
-  background: #1b2735;
+  background: #1b2735; /* Couleur de fond de la scrollbar */
 }
 
 .container::-webkit-scrollbar-thumb {
-  background: #456CE7;
+  background: #456CE7; /* Couleur du pouce de la scrollbar */
   border-radius: 4px;
-  height: 4px;
+
+    height: 4px;
+
 }
 
 .container::-webkit-scrollbar-thumb:hover {
-  background: #ABC4FD;
+  background: #ABC4FD; /* Couleur en survol */
 }
 
-/* Accordéon */
-.accordion {
-  width: 100%;
-  max-width: 2000px;
-  margin: 2rem auto;
-}
-
-.accordion-item {
-  background-color: #fff;
-  color: #111;
-  margin: 1rem 0;
-  border-radius: 1rem;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
-}
-
-.accordion-item-header {
-  padding: 0.5rem 3rem 0.5rem 1rem;
-  min-height: 2.5rem;
-  line-height: 1.25rem;
-  color: #6380DD;
-  display: flex;
-  align-items: center;
-  position: relative;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-.accordion-item-header::after {
-  content: "\002B";
-  font-size: 1.5rem;
-  position: absolute;
-  right: 1rem;
-}
-
-.accordion-item-header.active::after {
-  content: "\2212";
-}
 
 .accordion-item-body {
-  overflow-y: auto;
-  max-height: 1200px;
-  transition: max-height 0.2s ease-out;
-  font-size: 14px;
-}
-
-.accordion-item-body-content {
-  padding: 1rem;
-  line-height: 1.5rem;
-  border-top: 1px solid;
-  border-image: linear-gradient(to right, transparent, #34495e, transparent) 1;
+  overflow-y: auto; /* Permet le défilement vertical */
+  max-height: 1200px; /* Limite la hauteur */
 }
 
 /* Titre avec police futuriste */
@@ -167,7 +100,7 @@ input[type="time"] {
 }
 
 input[type="time"]:focus {
-  border-color: #E9B2F9;
+  border-color: #E9B2F9; /* Bordure rose lors du focus */
   outline: none;
   transform: scale(1.05);
 }
@@ -200,7 +133,7 @@ input[type="time"]:focus {
   gap: 10px;
 }
 
-/* Bouton reset arrondi */
+/* Style du bouton reset pour rester rond avec une hauteur égale */
 #resetButton {
   display: flex;
   align-items: center;
@@ -217,19 +150,23 @@ input[type="time"]:focus {
   margin-top: 10px;
 }
 
+/* Style de l'icône pour le centrer */
+#resetButton i {
+  font-size: 1rem;
+}
+
+/* Effet de survol */
 #resetButton:hover {
   background: linear-gradient(135deg, #C675F8, #E9B2F9);
   transform: scale(1.05);
 }
 
-/* Style de l'icône */
-#resetButton i {
-  font-size: 1rem;
-}
 
-/* Conteneur de résultats */
+
+
+/* Conteneur de résultats épuré, sans néon par défaut */
 .result {
-  display: none;
+  display: none; /* Masque le conteneur tant qu'il n'est pas actif */
   color: #e0e0e0;
   font-size: 1.2rem;
   font-family: jua, sans-serif;
@@ -239,49 +176,96 @@ input[type="time"]:focus {
   margin-top: 30px;
 }
 
+/* Effet néon appliqué uniquement lorsque la classe 'active' est présente */
 .result.active {
   display: block;
-  border: 2px solid #ffb3ff;
-  box-shadow: 0 0 10px rgba(255, 179, 255, 0.6), 0 0 20px rgba(255, 179, 255, 0.4), 0 0 30px rgba(255, 179, 255, 0.3);
-  transition: all 0.5s ease;
+  border: 2px solid #ffb3ff; /* Bordure rose néon */
+  box-shadow: 
+    0 0 10px rgba(255, 179, 255, 0.6),
+    0 0 20px rgba(255, 179, 255, 0.4), 
+    0 0 30px rgba(255, 179, 255, 0.3); /* Effet néon */
+  transition: all 0.5s ease; /* Transition pour un effet d'apparition */
 }
 
 
 
-input[type="time"]::-webkit-datetime-edit-text {
-  opacity: 0.5; /* Ajuste l'opacité pour créer l'effet visuel du placeholder */
+.accordion {
+  width: 100%;
+  max-width: 1000px;
+  margin: 2rem auto;
 }
-
-input[type="time"]:placeholder-shown {
-  color: #aaa;
+.accordion-item {
+  background-color: #fff;
+  color: #111;
+  margin: 1rem 0;
+  border-radius: 1rem;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.25);
 }
+.accordion-item-header {
+  padding: 0.5rem 3rem 0.5rem 1rem;
+  min-height: 2.5rem;
+  line-height: 1.25rem;
+  color: #6380DD;
 
-
-
-
-/* Fond étoilé */
-html {
-  height: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  font-weight: bold;
+}
+.accordion-item-header::after {
+  content: "\002B";
+  font-size: 1.5rem;
+  position: absolute;
+  right: 1rem;
+}
+.accordion-item-header.active::after {
+  content: "\2212";
+}
+.accordion-item-body {
+  max-height: 0;
   overflow: hidden;
-  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  transition: max-height 0.2s ease-out;
+  font-size: 14px;
 }
+.accordion-item-body-content {
+  padding: 1rem;
+  line-height: 1.5rem;
+  border-top: 1px solid;
+  border-image: linear-gradient(to right, transparent, #34495e, transparent) 1;
+
+}
+
+
+
+
+
+
+
+/* le fond avec étoiles */
+html {
+    height: 100%;
+    overflow: hidden;
+    background: radial-gradient(ellipse at bottom, #1b2735 0%,#090a0f 100%);
+}
+
+
 
 /* Styles pour les différentes couches d'étoiles */
 #stars, #stars2, #stars3 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
 }
 
-
 #stars {
-  width: 1px;
-  height: 1px;
-  background: transparent;
-  animation: animStar 50s linear infinite;
+    width: 1px;
+    height: 1px;
+    background: transparent;
+    animation: animStar 50s linear infinite;
     box-shadow: 779px 1331px #fff, 324px 42px #fff, 303px 586px #fff,
     1312px 276px #fff, 451px 625px #fff, 521px 1931px #fff, 1087px 1871px #fff,
     36px 1546px #fff, 132px 934px #fff, 1698px 901px #fff, 1418px 664px #fff,
@@ -842,10 +826,3 @@ html {
         transform: translateY(-2000px);
     }
 }
-
-
-
-
-
-
-
