@@ -104,7 +104,6 @@ input {
 
 
 
-
 input {
   width: 100%;
   padding: 15px 10px; /* Uniformiser le padding */
@@ -126,8 +125,8 @@ input {
 
 input[type="time"] {
   padding: 15px; /* Assurer un padding suffisant */
-  height: 50px; /* Augmenter la hauteur pour un meilleur affichage */
-  min-height: 50px; /* Empêche l'input de devenir trop petit */
+  height: 30px; /* Augmenter la hauteur pour un meilleur affichage */
+  min-height: 30px; /* Empêche l'input de devenir trop petit */
   width: 95% !important;
   align-content: center;
   box-sizing: border-box;
