@@ -125,6 +125,7 @@ input[type="time"] {
   margin: 5px 0 15px;
   border: 2px solid rgba(255, 255, 255, 0.3);
   border-radius: 20px;
+  box-sizing: border-box; /* Assure que la largeur prend en compte les bordures et le padding */
   background: rgba(255, 255, 255, 0.2);
   color: #ffffff;
   font-size: 1rem;
