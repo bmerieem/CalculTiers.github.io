@@ -221,6 +221,8 @@ input[type="time"] {
   width: 100%;
   max-width: 1000px;
   margin: 2rem auto;
+  margin-bottom: 0;
+
 }
 .accordion-item {
   background-color: #fff;
