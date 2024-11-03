@@ -29,6 +29,7 @@ body {
   max-width: 1000px;
   text-align: center;
   color: #ffffff;
+  margin-bottom: 50px;
 
 
 
@@ -182,7 +183,7 @@ input[type="time"] {
 .result {
   display: none; /* Masque le conteneur tant qu'il n'est pas actif */
   color: #e0e0e0;
-  font-size: 14px;
+  font-size: 15px;
   font-family: jua, sans-serif;
   color: white;
   padding: 1.5rem;
