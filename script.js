@@ -92,11 +92,11 @@ accordionItemHeaders.forEach(accordionItemHeader => {
     
     // Uncomment in case you only want to allow for the display of only one collapsed item at a time!
     
-    const currentlyActiveAccordionItemHeader = document.querySelector(".accordion-item-header.active");
-    if(currentlyActiveAccordionItemHeader && currentlyActiveAccordionItemHeader!==accordionItemHeader) {
-    currentlyActiveAccordionItemHeader.classList.toggle("active");
-     currentlyActiveAccordionItemHeader.nextElementSibling.style.maxHeight = 0;
-     }
+    // const currentlyActiveAccordionItemHeader = document.querySelector(".accordion-item-header.active");
+    // if(currentlyActiveAccordionItemHeader && currentlyActiveAccordionItemHeader!==accordionItemHeader) {
+    //   currentlyActiveAccordionItemHeader.classList.toggle("active");
+    //   currentlyActiveAccordionItemHeader.nextElementSibling.style.maxHeight = 0;
+    // }
 
     accordionItemHeader.classList.toggle("active");
     const accordionItemBody = accordionItemHeader.nextElementSibling;
@@ -107,27 +107,5 @@ accordionItemHeaders.forEach(accordionItemHeader => {
       accordionItemBody.style.maxHeight = 0;
     }
     
-  });
-});
-
-
-
-document.addEventListener("DOMContentLoaded", function() {
-  const timeInputs = document.querySelectorAll('input[type="time"]');
-
-  timeInputs.forEach(input => {
-    if (!input.value) {
-      input.setAttribute('placeholder', 'HH:MM'); // Affiche un format type placeholder
-    }
-
-    input.addEventListener('focus', function() {
-      this.removeAttribute('placeholder');
-    });
-
-    input.addEventListener('blur', function() {
-      if (!this.value) {
-        this.setAttribute('placeholder', 'HH:MM');
-      }
-    });
   });
 });
