@@ -93,6 +93,9 @@ input {
   font-size: 1rem;
   text-align: center;
   transition: border-color 0.3s ease, transform 0.3s ease;
+
+  min-width: 100% !important;
+
 }
 
 input:focus {
@@ -103,8 +106,8 @@ input:focus {
 
 input[type="time"] {
     width: 100% !important;
+    min-width: 100% !important;
 }
-
 
 /* Boutons futuristes */
 #calculateButton {
