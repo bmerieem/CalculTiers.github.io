@@ -99,6 +99,7 @@ input {
   transition: border-color 0.3s ease, transform 0.3s ease;
 
   min-width: 100% !important;
+  min-height: 50px;
 
 }
 
