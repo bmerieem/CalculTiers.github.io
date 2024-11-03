@@ -97,9 +97,8 @@ input {
   font-size: 1rem;
   text-align: center;
   transition: border-color 0.3s ease, transform 0.3s ease;
-
   min-width: 100% !important;
-  min-height: 50px;
+
 
 }
 
@@ -116,8 +115,12 @@ input[type="time"] {
   padding-bottom: 10px;
   padding-left: 10px;
   box-sizing: border-box;
-  min-width: 100% !important;
+  min-width: 90% !important;
   align-content: center;
+  min-height: 50px !important;
+
+
+  
 }
 
 
