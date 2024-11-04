@@ -345,7 +345,7 @@ li {
 }
 
 .card {
-  background-color: transparent;
+
   background-blend-mode: overlay;
   padding: 1.5rem;
   border-radius: 10px;
@@ -353,6 +353,7 @@ li {
   color: #ffffff;
   text-align: center;
 }
+
 .card h3 {
   margin: 0 0 1rem;
   color: #FFB3FF;
