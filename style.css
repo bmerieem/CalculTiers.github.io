@@ -343,10 +343,9 @@ li {
   margin-top: 2rem;
   
 }
-
 .card {
-
-  backdrop-filter: blur(10px); /* Appliquer un flou si supporté */
+  background-color: rgba(255, 255, 255, 0.2); /* Fond blanc semi-transparent */
+  background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1)); /* Ajouter un dégradé léger */
   background-blend-mode: overlay;
   padding: 1.5rem;
   border-radius: 10px;
