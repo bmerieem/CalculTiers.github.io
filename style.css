@@ -346,6 +346,7 @@ li {
 
 .card {
 
+  backdrop-filter: blur(10px); /* Appliquer un flou si supporté */
   background-blend-mode: overlay;
   padding: 1.5rem;
   border-radius: 10px;
