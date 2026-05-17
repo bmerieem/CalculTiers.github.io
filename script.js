@@ -51,6 +51,7 @@ function calculateTiers() {
   const firstThird = new Date(sunsetTime.getTime() + thirdOfNight);
   const secondThird = new Date(firstThird.getTime() + thirdOfNight);
   const lastThird = new Date(fajrTime.getTime() - thirdOfNight);
+  const middleOfNight = new Date(sunsetTime.getTime() + nightDuration / 2);
 
   // Afficher les résultats dans les cartes
   document.getElementById('startFirstThird').textContent = sunsetTime.toTimeString().slice(0, 5);
@@ -61,6 +62,8 @@ function calculateTiers() {
 
   document.getElementById('startLastThird').textContent = lastThird.toTimeString().slice(0, 5);
   document.getElementById('endLastThird').textContent = fajrTime.toTimeString().slice(0, 5);
+
+  document.getElementById('middleNight').textContent = middleOfNight.toTimeString().slice(0, 5);
 
   // Affiche un effet ou met à jour le conteneur si nécessaire
   const resultContainer = document.getElementById('result');
@@ -76,9 +79,14 @@ function resetFields() {
   document.getElementById('sunset').value = '';
   document.getElementById('fajr').value = '';
 
+  // Vide les spans individuellement pour préserver les cartes
+  ['startFirstThird','endFirstThird','startSecondThird','endSecondThird',
+   'startLastThird','endLastThird','middleNight'].forEach(id => {
+    document.getElementById(id).textContent = '';
+  });
+
   const resultContainer = document.getElementById('result');
-  resultContainer.innerHTML = ''; // Efface le contenu du résultat
-  resultContainer.classList.remove('active'); // Supprime l'effet néon au reset
+  resultContainer.classList.remove('active');
   localStorage.removeItem("sunset");
   localStorage.removeItem("fajr");
 }
